@@ -13,16 +13,16 @@ namespace ApiAndroid.Controllers {
         public ActionResult Get() {
             return Ok(dbConexion.Productos.ToArray());
         }
-        /*[HttpGet("{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult> Get(int id){
-        var clientes = await dbConexion.Productos.FindAsync(id);
-            if (clientes !=null) {
-                return Ok(clientes);
+        var productos = await dbConexion.Productos.FindAsync(id);
+            if (productos !=null) {
+                return Ok(productos);
 
             }else{
                 return NotFound();
 
             }
-        }*/
+        }
     }
 }
